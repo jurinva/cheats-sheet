@@ -1,3 +1,13 @@
+#Shrink DB
+
+```DECLARE @sql varchar(1000)
+SET @sql = 'ALTER DATABASE '+QUOTENAME(DB_NAME())+'
+SET RECOVERY SIMPLE DBCC SHRINKDATABASE('''+DB_NAME()+''')
+ALTER DATABASE '+QUOTENAME(DB_NAME())+' 
+SET RECOVERY FULL WITH NO_WAIT'
+EXEC (@sql)```
+
+
 #Restore DB
 
 ##Restore dbname to dbnamenew
