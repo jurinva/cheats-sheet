@@ -1,5 +1,5 @@
-#!/bin/bash
+#File systems
 
-#resize partition to max
+##Resize partition to max
 growpart /dev/sdb 1
 resize2fs /dev/sdb1
