@@ -1,7 +1,12 @@
 #Restore DB
 
-RESTORE DATABASE fulldbnamenew
-FROM DISK = 'E:\fulldbname-20120814_015000-FULL.BAK'
-WITH MOVE 'fulldbname' TO 'D:\fulldbnamenew\fulldbnamenew.mdf',
-MOVE 'fulldbname_log' TO 'D:\fulldbnamenew\fulldbnamenew_log.ldf',
-REPLACE
+##Restore dbname to dbnamenew
+```RESTORE DATABASE dbnamenew
+FROM DISK = 'E:\dbname-20120814_015000-FULL.BAK'
+WITH MOVE 'dbname' TO 'D:\dbnamenew\dbnamenew.mdf',
+MOVE 'dbname_log' TO 'D:\dbnamenew\dbnamenew_log.ldf',
+REPLACE```
+
+##List files in backup
+```RESTORE FILELISTONLY
+FROM DISK = 'E:\BPRO_ARC\zaogfz708-20110825_021700-FULL.BAK'```
