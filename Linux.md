@@ -5,3 +5,9 @@
 growpart /dev/sdb 1
 resize2fs /dev/sdb1
 ```
+
+## Delete mbr including all partitions
+It help, if Windows cant create partitions on disk
+```bash
+dd if=/dev/zero of=/dev/sdc bs=512 count=1
+```
