@@ -1,5 +1,5 @@
 # Exchange 2013 emc blank page (error 15021)
-System log contains next errors 
+System log contains next errors  
 ```Event ID 15021 Source HttpEvent: An error occurred while using SSL configuration for endpoint 0.0.0.0:444. The error status code is contained within the returned data```
 
 ```cmd
@@ -24,10 +24,10 @@ SSL Certificate bindings:
 netsh http delete sslcert ipport=0.0.0.0:444
 netsh http add sslcert ipport=0.0.0.0:444 certhash=2f74ed7ce04e3315c2a634c9dfb83278132fb51e appid="{4dcc9b81-e3ec-4a21-b012-59fc61bc0914}"
 ```
-Or
+Or  
 IISManager -> Sites -> Exchange Back End -> Bindings -> https -> Edit -> SSL Certificate -> Select
 
-Right certificate you can find in Certlm 
-Certificates-Local Computer -> Find 
-Contains = 2f74ed7ce04e3315c2a634c9dfb83278132fb51e 
-Look in Field = SHA1 Hash 
+Right certificate you can find in Certlm  
+Certificates-Local Computer -> Find  
+Contains = 2f74ed7ce04e3315c2a634c9dfb83278132fb51e  
+Look in Field = SHA1 Hash  
