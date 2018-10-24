@@ -1,3 +1,16 @@
+# Errors
+
+## SQL Server Error: The proposed new database owner is already a user or aliased in the database
+```sql
+USE MyDB
+GO
+--  Dropping test_user from the user database
+SP_DROPUSER 'test_user'
+GO
+-- Changing the OWNER of the database
+SP_CHANGEDBOWNER 'test_user'
+```
+
 # Shrink DB
 
 ```sql
