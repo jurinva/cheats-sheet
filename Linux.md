@@ -2,7 +2,7 @@
 
 ## Resize partition to max
 ```bash
-growpart /dev/sdb 1
+growpart /dev/sdb1
 resize2fs /dev/sdb1
 ```
 
