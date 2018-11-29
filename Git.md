@@ -26,10 +26,24 @@ Remove second line
 ```bash
 # We can see that the change was applied correctly
 git log --pretty=oneline --abbrev-commit
-git log --pretty=oneline --abbrev-commit
 d9f1cf5 Changed again
 105fd3d Changed content
 df33c8a First commit
 # Delete a remote commit
 git push origin +master
+```
+
+If we have only First and Second commits
+
+```bash
+git reset --hard HEAD^
+git log --pretty=oneline --abbrev-commit
+git push origin +master
+```
+
+# Return deleted commit git reflog
+
+```bash
+git reflog
+git reset --hard ID
 ```
