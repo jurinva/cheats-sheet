@@ -41,7 +41,7 @@ git log --pretty=oneline --abbrev-commit
 git push origin +master
 ```
 
-# Return deleted commit git reflog
+# Return deleted commit
 
 ```bash
 git reflog
