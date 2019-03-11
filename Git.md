@@ -47,3 +47,8 @@ git push origin +master
 git reflog
 git reset --hard ID
 ```
+
+# View the change history of a file
+```bash
+gitk --folow [filename]
+```
