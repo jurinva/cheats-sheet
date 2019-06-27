@@ -32,6 +32,5 @@ done
 \# `-n` is a more simple and direct way!
 
 ### Related Material
-===============
 - [ssh break the while loop?](http://www.unix.com/shell-programming-scripting/38060-ssh-break-while-loop.html)
 - [Looping connect to different server](http://www.unix.com/shell-programming-scripting/37773-looping-connect-different-server.html)
