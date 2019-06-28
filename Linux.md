@@ -22,14 +22,14 @@ sudo package remove packagename
 package remove celestia
 ```
 
-# SSH tunel
-```bash
-ssh -L 3389:<ip of windows server>:3389 <ip of ssh server> -l <ssh user> -N
-```
-
 ## Autopackage - remove itself
 ```bash
 sudo package remove autopackage
+```
+
+# SSH tunel
+```bash
+ssh -L 3389:<ip of windows server>:3389 <ip of ssh server> -l <ssh user> -N
 ```
 
 # Ubuntu
