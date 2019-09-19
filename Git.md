@@ -52,3 +52,32 @@ git reset --hard ID
 ```bash
 gitk --folow [filename]
 ```
+
+# Remove commit history
+[Original](https://stackoverflow.com/questions/11687899/remove-cut-off-gits-revision-commit-history)
+If you  want to cut off the old commits.
+For example, we have commits:
+```
+A -- B -- C -- D -- E -- F
+```
+and want to get something like
+```
+D -- E -- F
+```
+Assuming master is at commit F:
+```bash
+$ git checkout --orphan temp <d-sha1>
+$ git commit
+
+ # rebase everything else onto the temp branch
+$ git rebase --onto temp <d-sha1> master
+
+ # clean up
+$ git checkout master
+$ git branch -d temp
+```
+f you want to completely remove the old loose objects (A, B, & C), first make sure you have exactly what you want. This cannot be undone. Once you have confirmed it's what you want, run:
+```bash
+$ git reflog expire --expire=now --all
+$ git gc --prune=now
+```
